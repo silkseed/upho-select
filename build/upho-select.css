@@ -1,0 +1,117 @@
+.upho .widget.select {
+    font-size: 16px;
+    font-family: helvetica, arial, verdana, sans-serif;
+}
+.upho .widget.select label {
+    color: #444;
+    margin: 8px 4px 8px 0;
+}
+.upho .widget.select select {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 8px 0;
+}.upho .widget.select.enhanced {
+    float: left;
+    width: 100%;
+}
+.upho .widget.select.enhanced .ui-state {display: inline;}
+
+
+.upho .widget.select.enhanced label {float: left; margin: 8px 8px 8px 0;}
+.upho .widget.select.enhanced select {display: none;}
+
+
+.upho .widget.select.enhanced .ui-widget-container {
+    position: relative;
+    float: left;
+}
+
+
+.upho .widget.select.enhanced .ui-widget-box {
+    border: 1px solid #aaa;
+    background: #eee;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e4e4e4));
+    display: inline;
+    float: left;
+    width: 100%;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 4px #fff;
+}
+.upho .widget.select.enhanced.open .ui-widget-box {
+    -webkit-border-radius: 2px 2px 0 0;
+}
+.upho .widget.select.enhanced .ui-widget-box h2 {
+    color: #444;
+    display: inline; float: left;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    margin: 0; padding: 8px;
+    cursor: default;
+}
+
+
+.upho .widget.select.enhanced .actions {
+    margin: 0; padding: 0;
+    list-style-type: none;
+    float: right;
+}
+.upho .widget.select.enhanced .actions li {
+    width: 32px; height: 32px;
+    float: left;
+}
+.upho .widget.select.enhanced .actions li:hover {
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+
+.upho .widget.select.enhanced .actions li a {
+    width: 100%; height: 100%;
+    float: left;
+    text-decoration: none;
+    color: #777;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upho .widget.select.enhanced .actions li:active {
+    background: #ddd;
+    background: -webkit-gradient(linear, left bottom, left top, from(#eee), to(#ddd));
+    text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25);
+}
+/* this is preserving the focus border positioning */
+.upho .widget.select.enhanced .actions li:active a {
+    padding: 1px 0 0 0;
+    height: 30px;
+    line-height: 31px;
+}
+
+
+.upho .widget.select.enhanced.closed .actions li.close {display: none;}
+.upho .widget.select.enhanced.open .actions li.open {display: none;}.upho .widget.select.enhanced ul.options-list {
+    clear: both;
+    width: 100%;
+    margin: 0; padding: 0;
+    list-style-type: none;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-top: 1px solid #ddd;
+    -webkit-border-radius: 0 0 2px 2px;
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+.upho .widget.select.enhanced ul.options-list li {
+    padding: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.upho .widget.select.enhanced ul.options-list li:hover {background: #eee;}
+.upho .widget.select.enhanced ul.options-list li:active {background: #ddd;}
+
+
+.upho .widget.select.enhanced.closed ul.options-list {
+    display: none;
+}

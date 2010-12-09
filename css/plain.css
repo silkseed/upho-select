@@ -1,0 +1,13 @@
+.upho .widget.select {
+    font-size: 16px;
+    font-family: helvetica, arial, verdana, sans-serif;
+}
+.upho .widget.select label {
+    color: #444;
+    margin: 8px 4px 8px 0;
+}
+.upho .widget.select select {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 8px 0;
+}

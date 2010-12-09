@@ -1,0 +1,23 @@
+.upho .widget.select.enhanced ul.options-list {
+    clear: both;
+    width: 100%;
+    margin: 0; padding: 0;
+    list-style-type: none;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-top: 1px solid #ddd;
+    -webkit-border-radius: 0 0 2px 2px;
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+.upho .widget.select.enhanced ul.options-list li {
+    padding: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.upho .widget.select.enhanced ul.options-list li:hover {background: #eee;}
+.upho .widget.select.enhanced ul.options-list li:active {background: #ddd;}
+
+
+.upho .widget.select.enhanced.closed ul.options-list {
+    display: none;
+}

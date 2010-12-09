@@ -1,0 +1,12 @@
+{
+    "targets": {
+        "upho-select.js": {
+            "basedir": "src",
+            "sources": ["main.js"]
+        },
+        "upho-select.css": {
+            "basedir": "css",
+            "sources": ["plain.css", "enhanced.css", "list.css"]
+        }
+    }
+}
