@@ -81,3 +81,20 @@
 
 .upho .widget.select.enhanced.closed .actions li.close {display: none;}
 .upho .widget.select.enhanced.open .actions li.open {display: none;}
+
+
+.ui-curtain.UphoSelect {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1000;
+}
+
+.upho .widget.select.enhanced.ui-curtain-floater label {
+    position: relative;
+    z-index: 1001;
+}
+.upho .widget.select.enhanced.ui-curtain-floater .ui-widget-container {
+    position: relative;
+    z-index: 1001;
+}

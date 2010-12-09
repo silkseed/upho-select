@@ -35,6 +35,7 @@ var UphoSelect = function (root, selected_element) {
         if (!jQuery(this.root).hasClass('open')) {
             jQuery(this.root).addClass('open');
         }
+        this.call_hook('on_open');
     };
 
     this.close = function (update) {
@@ -47,6 +48,7 @@ var UphoSelect = function (root, selected_element) {
         if (update !== false) {
             this.update_title();
         }
+        this.call_hook('on_close');
     };
 
     this.update_title = function () {
@@ -54,6 +56,7 @@ var UphoSelect = function (root, selected_element) {
             jQuery(this.root).find('option:selected').text());
     };
 
+    this.call_hook('init');
     this.call_hook('init_markup');
     this.call_hook('init_events');
     jQuery(this.root).data('UphoSelect', this);
@@ -61,10 +64,13 @@ var UphoSelect = function (root, selected_element) {
     return this;
 };
 UphoSelect.prototype.hooks = {
+    init: new Array(),
     init_markup: new Array(),
     init_events: new Array(),
     add_option: new Array(),
-    click_list_element: new Array()
+    click_list_element: new Array(),
+    on_open: new Array(),
+    on_close: new Array()
 };
 
 
@@ -151,6 +157,29 @@ UphoSelect.prototype.hooks.click_list_element.push(function (ui) {
     jQuery(jQuery(ui).data('element')).parents('select').find('option').attr('selected', '');
     jQuery(jQuery(ui).data('element')).attr('selected', 'selected');
     this.close();
+});
+
+
+/* create click-away curtain */
+UphoSelect.prototype.hooks.on_open.push(function () {
+    jQuery('.ui-curtain.UphoSelect').click();
+    jQuery('body').append('<div class="ui-curtain UphoSelect"></div>');
+    if (!jQuery(this.root).hasClass('ui-curtain-floater')) {
+        jQuery(this.root).addClass('ui-curtain-floater');
+    }
+    var self = this;
+    jQuery('.ui-curtain.UphoSelect').bind('click', function () {
+        self.close();
+    });
+});
+
+
+/* destroy click-away curtain */
+UphoSelect.prototype.hooks.on_close.push(function () {
+    jQuery('.ui-curtain.UphoSelect').remove();
+    if (jQuery(this.root).hasClass('ui-curtain-floater')) {
+        jQuery(this.root).removeClass('ui-curtain-floater');
+    }
 });
 jQuery.fn.uphoSelect = (function (options) {
     var o = {};
